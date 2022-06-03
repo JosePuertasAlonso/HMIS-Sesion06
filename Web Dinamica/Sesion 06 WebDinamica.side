@@ -1,0 +1,729 @@
+{
+  "id": "69142c7c-8499-4e26-97ea-13f501b8dfef",
+  "version": "2.0",
+  "name": "Sesion 06 WebDinamica",
+  "url": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+  "tests": [{
+    "id": "1a2fa2e2-30eb-4d6b-8955-5556a5bd992c",
+    "name": "1. Crear tarea (caso correcto)",
+    "commands": [{
+      "id": "d8a6c297-78a8-47fa-a556-50c4258f227e",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfce0aad-1956-4b55-8677-8d3b6b1a8d71",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e823742a-9765-42b6-bba5-9c7101447c6a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create New",
+      "targets": [
+        ["linkText=Create New", "linkText"],
+        ["css=a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Create New')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create New')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00abed41-4a74-4dd8-a51c-22e939aba0ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c7890de-d025-45ef-aef7-c81d2dba07c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Nueva Tarea"
+    }, {
+      "id": "9aee8c3a-304f-42a4-8406-050c5a1ec380",
+      "comment": "",
+      "command": "click",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f16183d9-e9a1-4e7f-a344-5c2c641fdc51",
+      "comment": "",
+      "command": "type",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2022-06-10"
+    }, {
+      "id": "d27611fc-5bac-4558-8c56-e94d3f30ce2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c87e80b4-a380-4183-915a-fe57218c6fcb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Nueva Tarea')]", "xpath:innerText"]
+      ],
+      "value": "Nueva Tarea"
+    }]
+  }, {
+    "id": "b38d5fc5-1f4c-454d-ac8f-f59bace61b15",
+    "name": "2. Crear Tarea (incorrecto)",
+    "commands": [{
+      "id": "fef4f8d3-1722-4359-8162-2c2232e9a853",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": "aaaa-mm-dd"
+    }, {
+      "id": "4cca9278-5b6b-4b15-9fa0-8961bea66167",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3010e4ca-98ad-4214-87cf-d2b3fcbe70b5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create New",
+      "targets": [
+        ["linkText=Create New", "linkText"],
+        ["css=p > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Create New')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create New')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0987cbc-27d9-4c2f-896f-d5e913649dce",
+      "comment": "",
+      "command": "click",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2153bfc4-7a67-4307-a639-917899d1ec0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Nueva Tarea"
+    }, {
+      "id": "6db1c018-86c0-4267-929d-59b1f92587d1",
+      "comment": "",
+      "command": "click",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d12e289f-059f-425a-a6ff-8f05e69ea07a",
+      "comment": "",
+      "command": "type",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "aaaa/mm/dd"
+    }, {
+      "id": "a6cb3059-a0f5-4f18-9bf1-f21188f2d01b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Create']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d85f9ae-6860-44bf-99ac-49221959fe77",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=CreatedDate-error",
+      "targets": [
+        ["id=CreatedDate-error", "id"],
+        ["css=#CreatedDate-error", "css:finder"],
+        ["xpath=//span[@id='CreatedDate-error']", "xpath:attributes"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91926ac0-2d11-4b3b-9333-972bd35d9f79",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=CreatedDate-error",
+      "targets": [
+        ["id=CreatedDate-error", "id"],
+        ["css=#CreatedDate-error", "css:finder"],
+        ["xpath=//span[@id='CreatedDate-error']", "xpath:attributes"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "The Created Date field is required."
+    }]
+  }, {
+    "id": "e7162fba-fa91-4a07-8682-35ed1fe8b0db",
+    "name": "Borrar Tarea",
+    "commands": [{
+      "id": "489d19bd-37bf-49c6-a06d-842b4d330f67",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5421d706-5f11-45bf-baa7-9aadd8a93e3e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d8616fc-c420-46c6-bf83-980e3d097f36",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Delete",
+      "targets": [
+        ["linkText=Delete", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Delete/14')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a70354fd-0f3a-4861-af93-e2fda418f10a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Delete']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de695e4d-a361-4e6a-87e9-9f271378ee6c",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.body-content",
+      "targets": [
+        ["css=.body-content", "css:finder"],
+        ["xpath=//div[2]", "xpath:position"]
+      ],
+      "value": "Nueva Tarea"
+    }]
+  }, {
+    "id": "66cf3f01-a116-4a80-8726-88f8b129a044",
+    "name": "3. Comprobar lista de tareas(correcto)",
+    "commands": [{
+      "id": "0a390cd6-0072-4f3e-b506-ec7846e2fd4d",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5517a3e8-2d4e-47d3-9efe-1fdbabc47850",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85023c8d-f5d5-425e-8038-4ee7967acd45",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=td > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Edit/17')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "050d0caa-c444-447e-ab50-9a907709f5fb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Details",
+      "targets": [
+        ["linkText=Details", "linkText"],
+        ["css=td > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Details')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Details/17')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef8ebafb-90a2-49b8-8c36-04d4ef7892ff",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Delete",
+      "targets": [
+        ["linkText=Delete", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Delete/17')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6f4f873c-bb4e-4fda-ad75-b6f9f70467db",
+    "name": "Comprobar lista de tareas(incorrecto) ",
+    "commands": [{
+      "id": "ae8459e9-b6d7-4ac9-807e-cb483b2c6faf",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2db84fe5-6f1f-4ff3-9cee-564153947961",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3e3c2c8-cf3c-4737-a3bd-2ed260c71871",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=td > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Edit/17')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c45a18ae-10c1-4ee9-abb0-49b9e8b6aa47",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Details",
+      "targets": [
+        ["linkText=Details", "linkText"],
+        ["css=td > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Details')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Details/17')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "016760d0-3246-4f5e-b373-53650e42c812",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Delete",
+      "targets": [
+        ["linkText=Delete", "linkText"],
+        ["css=a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Delete/17')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e826c855-cc92-41b3-9bad-6d3d76102756",
+    "name": "4. Editar tarea(correcto)",
+    "commands": [{
+      "id": "934a8504-939c-4919-b2c3-6482517ff243",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4309415b-ce2d-40a6-b114-a279d3982dc0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7af847f7-16ad-4a08-92eb-39229344494c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=td > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Edit/25')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30f13525-9bf9-4c5f-a6f1-cbc994852c98",
+      "comment": "",
+      "command": "click",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34d16c03-66dc-4646-ad8c-5e9ef989bd5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc849013-cfd3-4062-af61-b0f140e7be76",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d117329c-370c-469f-85ca-bf8c351f707f",
+      "comment": "",
+      "command": "type",
+      "target": "id=Description",
+      "targets": [
+        ["id=Description", "id"],
+        ["name=Description", "name"],
+        ["css=#Description", "css:finder"],
+        ["xpath=//input[@id='Description']", "xpath:attributes"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "Tarea Editada"
+    }, {
+      "id": "56cdde7c-7298-48e8-9a49-f14729814101",
+      "comment": "",
+      "command": "click",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9571b7e0-6956-4069-8d36-f4bdc95eae93",
+      "comment": "",
+      "command": "type",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2022-06-11"
+    }, {
+      "id": "bc8c9dbd-e083-4b4f-98e1-236356bef913",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Save']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "268d14e6-43aa-4cfd-af39-e561a1ab3f3b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Tarea Editada')]", "xpath:innerText"]
+      ],
+      "value": "Tarea Editada"
+    }]
+  }, {
+    "id": "66b40390-981b-41f9-9368-56d5def9510d",
+    "name": "5. Editar tarea (incorrecto)",
+    "commands": [{
+      "id": "fce24f99-ee54-48fe-8271-469fbe8587f8",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02a15c7a-5263-41af-b99a-8d2109e2c172",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a42ffdef-4f17-44a9-8e3b-860576865e05",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=td > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Edit/27')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "935b5add-22b2-42ea-aab5-34170b839925",
+      "comment": "",
+      "command": "click",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd38cda3-3cc2-4cb2-96cb-a108c2c0f778",
+      "comment": "",
+      "command": "type",
+      "target": "id=CreatedDate",
+      "targets": [
+        ["id=CreatedDate", "id"],
+        ["name=CreatedDate", "name"],
+        ["css=#CreatedDate", "css:finder"],
+        ["xpath=//input[@id='CreatedDate']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "aaaa/mm/dd"
+    }, {
+      "id": "0a406637-bd87-49fe-a8b8-cc0c3ba64611",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Save']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09c1d379-16fb-4545-9c65-e8b7da0a1b84",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=CreatedDate-error",
+      "targets": [
+        ["id=CreatedDate-error", "id"],
+        ["css=#CreatedDate-error", "css:finder"],
+        ["xpath=//span[@id='CreatedDate-error']", "xpath:attributes"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b32421f4-3a1d-4098-8c02-1575207a826c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=CreatedDate-error",
+      "targets": [
+        ["id=CreatedDate-error", "id"],
+        ["css=#CreatedDate-error", "css:finder"],
+        ["xpath=//span[@id='CreatedDate-error']", "xpath:attributes"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "The Created Date field is required."
+    }]
+  }, {
+    "id": "27f2f6ba-9ea4-40e1-b4e9-7c31cde69c76",
+    "name": "6. Detalles tarea",
+    "commands": [{
+      "id": "87ee4a25-1599-47a2-85d8-820db7e65263",
+      "comment": "",
+      "command": "open",
+      "target": "http://dotnetappsqldb-rrs999.azurewebsites.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28d2aef5-1b1f-4814-ba7c-f055f3b9ed71",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "974x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0903b02d-e6b1-4975-98b8-eaf3841ea2ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Details",
+      "targets": [
+        ["linkText=Details", "linkText"],
+        ["css=td > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Details')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Todos/Details/29')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Details')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0c20bed-36e9-4585-82fe-0f13e57228e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dl-horizontal",
+      "targets": [
+        ["css=.dl-horizontal", "css:finder"],
+        ["xpath=//dl", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04397429-15db-4266-8a28-4f4ae7367d53",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=dt:nth-child(1)",
+      "targets": [
+        ["css=dt:nth-child(1)", "css:finder"],
+        ["xpath=//dt", "xpath:position"],
+        ["xpath=//dt[contains(.,'Description')]", "xpath:innerText"]
+      ],
+      "value": "Description"
+    }, {
+      "id": "7c770e2b-b6a0-400f-867f-27bf622256c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=dt:nth-child(3)",
+      "targets": [
+        ["css=dt:nth-child(3)", "css:finder"],
+        ["xpath=//dt[2]", "xpath:position"],
+        ["xpath=//dt[contains(.,'Created Date')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87fa780b-c223-4eae-b4d4-3dfbdd92ebe3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=dt:nth-child(3)",
+      "targets": [
+        ["css=dt:nth-child(3)", "css:finder"],
+        ["xpath=//dt[2]", "xpath:position"],
+        ["xpath=//dt[contains(.,'Created Date')]", "xpath:innerText"]
+      ],
+      "value": "Created Date"
+    }, {
+      "id": "fef602ee-6064-489a-93a1-08baa0274d5a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Back to List",
+      "targets": [
+        ["linkText=Back to List", "linkText"],
+        ["css=p > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Back to List')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[3]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Back to List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "1f9014a6-456f-43e9-81ec-bf2a7bcb9be6",
+    "name": "Test web dinamica",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1a2fa2e2-30eb-4d6b-8955-5556a5bd992c", "b38d5fc5-1f4c-454d-ac8f-f59bace61b15", "66cf3f01-a116-4a80-8726-88f8b129a044", "e826c855-cc92-41b3-9bad-6d3d76102756", "66b40390-981b-41f9-9368-56d5def9510d", "27f2f6ba-9ea4-40e1-b4e9-7c31cde69c76", "e7162fba-fa91-4a07-8682-35ed1fe8b0db", "6f4f873c-bb4e-4fda-ad75-b6f9f70467db"]
+  }],
+  "urls": ["http://dotnetappsqldb-rrs999.azurewebsites.net/"],
+  "plugins": []
+}
